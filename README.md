@@ -1,2 +1,2 @@
 # Replisc
-Remaking Replit. Still a WIP
+Remaking Discord. Still a WIP
