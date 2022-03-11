@@ -1,0 +1,226 @@
+body {
+	margin: 0;
+	padding: 0;
+
+	overflow-x: hidden;
+	overflow-y: hidden;
+}
+
+* {
+	font-family: 'PT Sans', sans-serif;
+}
+
+#friends { /* here's the thing for styling friends button */
+	background-image: url('/resources/replisc-logo-white.png');
+}
+
+#channels {
+	background-color: #36393F;
+	width: 15rem;
+	height: 100%;
+}
+
+@supports not( -moz-appearance:none ){
+	#friends {
+		margin-top: 1rem;
+	}
+}
+
+#servers {
+	position: absolute;
+
+	left: 0;
+	top: 0;
+
+	width: 3rem;
+	height: 100vh;
+
+	background: #23272A;
+	border-right: 2px solid rgb(33, 33, 33);
+	box-shadow: 2px 0px 4px #23272A;
+
+	z-index: 100;
+
+	padding: 0.5rem;
+}
+
+.round {
+	width: 3rem;
+	height: 3rem;
+
+	border-radius: 1.5rem;
+	border: none;
+
+	background: #2C2F33;
+	transition: all 0.2s ease-in-out;
+	background-repeat: no-repeat;
+	background-size: cover;
+
+	position: relative;
+	text-align: center;
+	color: white;
+}
+
+#servers button:hover {
+	border-radius: 0.8rem;
+	background-color: #7289da;
+}
+
+.round::before {
+	content: "";
+	position: absolute;
+	left: -0.3rem;
+	top: 25%;
+	border-left: 0px solid white;
+	height: 0%;
+	transition: all 0.1s ease-in-out;
+}
+
+#servers button:hover::before {
+	content: "";
+	position: absolute;
+	left: -0.3rem;
+	top: 25%;
+	border-left: 2px solid white;
+	height: 50%;
+}
+
+#servers button {
+	margin-bottom: 0.25rem;
+	cursor: pointer;
+}
+
+#server-holder {
+	position: absolute;
+	left: 4rem; /* i guess padding + margins? mhm now there is a white space fixed */
+	top: 0;
+
+	width: calc(100vw - 3rem);
+	height: 100vh;
+
+	background: #2C2F33;
+}
+
+#user { /* done */
+	background-color: #292b2f;
+	position: absolute;
+	left: 0rem;
+	bottom: 0;
+	padding: 0.5rem;
+	width: 14rem;
+}
+
+#username {
+	position: relative;
+	color: white;
+	font-size: 14pt;
+	bottom: 1rem;
+	margin-left: 1rem;
+}
+
+#profilePicture {
+	display: inline-block;
+}
+
+#channels {
+	position: relative;
+	color: white;
+}
+
+#find-conversation {
+	width: calc(100% - 1rem);
+	height: 1rem;
+
+	color: white;
+	border: none;
+	border-radius: 4px;
+	background: #23272A;
+
+	padding: 0.25rem;
+	margin: 0.25rem;
+}
+
+.conversation {
+	width: calc(100% - 1rem);
+	height: 1rem;
+
+	display: block;
+
+	margin: 0.125rem 0.25rem;
+	padding-left: 0.25rem;
+	padding-right: 0.25rem;
+	padding-top: 0.25rem;
+	padding-bottom: 0.25rem;
+
+	border-radius: 4px;
+	background: #23272A;
+
+	cursor: pointer;
+	transition: background 0.1s ease-in-out; /* now go to the js */
+}
+
+.conversation:hover {
+	background: #7289da;
+}
+
+#who {
+	position: absolute;
+	top: 0;
+	left: 15rem;
+	padding-left: 0.25rem;
+	padding-bottom: 0.25rem;
+	width: calc(100vw - 19rem);
+	height: auto;
+	font-size: 18pt;
+	color: white;
+	background: #292b2f;
+} /* yeah is this the other's username? cool hmm */
+
+/*
+can we implement the thing discord has that a dm/channel stays highlighted if you click on it until another one is clicked?
+*/
+
+#msg {
+	position: absolute;
+	bottom: 1.5rem; /* ok what's wrong with them take a look */
+	left: 19.25rem; /* What is the left for the text box? 16rem? hey can you help with something? the conversation buttons are supposed to have a small margin */
+	width: calc(100vw - 20rem);
+	height: 2rem;
+}
+
+#messages {
+	position: absolute;
+	padding: 0.5rem;
+
+	top: 3rem;
+	left: 15rem;
+
+	width: 90vw;
+	height: calc(90vh - 3rem);
+	overflow-y: auto;
+}
+
+.message {
+	padding: 0.25rem;
+	width: calc(100vw - 21rem);
+	color: white;
+	border-bottom: 1px solid #36393F;
+}
+
+.splitter {
+	width: 3rem;
+	height: 0.25rem;
+
+	border-radius: 0.125rem;
+	background: #2c2f33;
+
+	margin-bottom: 0.25rem;
+}
+
+#newServer {
+	font-size: 18pt;
+}
+
+#newServer:hover {
+	background-color: #43b581;
+}

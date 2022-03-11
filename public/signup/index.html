@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Replisc | Signup</title>
+		<link rel="stylesheet" href="styles/signup.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<link rel="shortcut icon" href="/resources/favicon.ico">
+	</head>
+	<body>
+		<div id="signup">
+			<span class="title">Sign up</span>
+			<span class="subtitle">Sign up to start using Replisc!</span>
+			<form method="POST">
+				<input name="username" type="text" id="username" autocomplete="off" required>
+					<label for="username" class="placeholder">Username</label>
+				</input>
+				<input name="email" type="text" id="email" autocomplete="off" pattern="[\w\d]+@(https?://)?[\w\d]+([\.][\w]+)+" required>
+					<label for="email" class="placeholder">Email</label>
+				</input>
+				<input name="password" type="password" id="password" autocomplete="off" required>
+					<label for="password" class="placeholder">Password</label>
+				</input>
+				<input type="submit" value="Signup"></input>
+			</form>
+		</div>
+	</body>
+	<script src="src/signup.js"></script>
+</html>

@@ -1,0 +1,51 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Replisc | Home</title>
+		<link rel='stylesheet' href='styles/home.css'>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/socket.io/2.3.0/socket.io.js"></script>
+		<link rel="shortcut icon" href="/resources/favicon.ico">
+	</head>
+	<body>
+		<div id="servers">
+			<button class="round" id="friends">
+			</button> <!-- This stays here 100% of the time. -->
+			<div class="splitter"></div>
+			<!-- <button class="round server"></button> this is the format for a server button -->
+			<button class="round" id="serverA">
+				a
+			</button>
+			<button class="round" id="serverB">
+				b
+			</button>
+			<button class="round" id="serverC">
+				c
+			</button> 
+			<button class="round" id="newServer">+</button><!-- TODO: implement this button -->
+		</div>
+		<div id="server-holder">
+			<div id="channels">
+				<input id="find-conversation" type="text" placeholder="Find or start a conversation"></input>
+				
+			</div>
+			<div id="info-holder">
+				<span id="who"></span>
+			</div>
+			<div id="messages">
+				<!-- Format for Messages
+					<div class="message">
+						<span class="username"></span>
+						<span class="content"></span>
+					</div>
+				-->
+			</div>
+			<div id="user">
+				<span class="round" id="profilePicture"></span>
+				<span id="username">Replisc</span>
+			</div>
+		</div>
+		<input type="text" id="msg"></input>
+	</body>
+	<script src="src/home.js"></script>
+</html>

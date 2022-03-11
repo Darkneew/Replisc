@@ -1,0 +1,25 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<title>Replisc | Login</title>
+		<link rel="stylesheet" href="styles/login.css">
+		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+		<link rel="shortcut icon" href="/resources/favicon.ico">
+	</head>
+	<body>
+		<div id="login">
+			<span class="title">Log in</span>
+			<span class="subtitle">Log in to continue using Replisc</span>
+			<form method="POST">
+				<input name="email" type="text" id="email" autocomplete="off" pattern="[\w\d]+@(https?://)?[\w\d]+([\.][\w]+)+" required>
+					<label for="email" class="placeholder">Email</label>
+				</input>
+				<input name="password" type="password" id="password" autocomplete="off" required>
+					<label for="password" class="placeholder">Password</label>
+				</input>
+				<input type="submit" value="Login"></input>
+			</form>
+		</div>
+	</body>
+	<script src="src/login.js"></script>
+</html>
